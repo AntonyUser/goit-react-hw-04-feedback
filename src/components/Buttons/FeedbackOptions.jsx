@@ -1,4 +1,7 @@
-const { Button } = require('./FeedbackOptions.styled');
+import PropTypes from 'prop-types';
+import { Button } from './FeedbackOptions.styled';
+
+// const { Button } = require('./FeedbackOptions.styled');
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
@@ -17,4 +20,9 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       })}
     </>
   );
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.array,
+  onLeaveFeedback: PropTypes.func,
 };
